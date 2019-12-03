@@ -1,0 +1,19 @@
+
+    <p>
+        Author:{{quote.description}}
+    </p>
+    
+ <p>{{quote.quote}}</p>
+ <p>This quote was submitted by:{{quote.poster}}.</p>
+ <button class="btn btn-danger" (click)='quoteDelete(true)'> Delete Quote <i class="fa fa-trash" aria-hidden="true"></i></button>
+ 
+ <button class=" btn btn-info" (click)='voteUp()' type="submit">
+     <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+     <span class="badge">{{upvote}} Likes</span>
+ </button>
+ 
+ <button (click)='voteDown()' class="btn btn-info" type="submit">
+    <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+     <span class="badge">{{downvote}} Dislikes</span>
+    
+ </button>

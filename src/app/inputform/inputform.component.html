@@ -1,1 +1,24 @@
-<p>inputform works!</p>
+<div class="container-fluid">
+    <h2 class="text-center">Create a New Quote</h2>
+    <hr>
+    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+        <div class="form-group">
+          <label for="description">Author:</label>
+          <textarea class="form-control" id="description" rows="1" [(ngModel)]="newQuote.description" name="description" #description="ngModel" required></textarea>
+          <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+            <p>This field is required</p>
+          </div>  
+            <label for="name">Your quote:</label>
+            <input type="text"textarea class="form-control" id="name" rows="4" [(ngModel)]="newQuote.name" name="name" #name='ngModel' required>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+              <p>This field is required</p>
+            </div>
+            <label for="description">Submitted by:</label>
+            <textarea class="form-control" id="poster"  [(ngModel)]="newQuote.poster" name="poster" #poster="ngModel" required></textarea>
+            <div [hidden]="poster.valid || poster.pristine" class="alert alert-danger">
+              <p>This field is required</p>
+            </div>  
+        </div>
+        <button type="submit" class="btn btn-success">Upload Quote</button>
+    </form>
+  </div>

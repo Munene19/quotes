@@ -1,0 +1,30 @@
+<link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
+<body>
+<div class="jumbotron text-center">
+  <h1>QUOTE CENTRAL</h1>
+</div>
+<div class="container">
+  <br>
+  <br>
+  <h1>Quotes</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <div *ngFor='let quote of quote;let i = index'>
+        <div>
+          <h6 class="card-body" id={{i}} appStrikethrough>{{quote.name}} posted {{quote.completeDate|timeAgo}}</h6>
+          <button (click)='toggleDetail(i)' class="btn btn-primary">Details</button>
+        </div>
+
+        <div *ngIf='quote.showDescription'>
+          <app-quote-detail  [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    </div>
+  </div>
+
+</div>
+</body>
+<script src="dist/timeago.js" type="text/javascript"></script>
