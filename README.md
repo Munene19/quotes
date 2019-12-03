@@ -1,10 +1,18 @@
 # Quotes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
+## Author information.
+ - Mike munene
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Technology Used
+
+ - HTML-We used html for displaying the content.
+ - CSS-We used css and bootstrap for styling the front-end of the website and making the landing page.
+ - Angular-We used Angular framework 
 
 ## Code scaffolding
 
