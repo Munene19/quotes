@@ -26,8 +26,8 @@ export class QuoteComponent implements OnInit {
   constructor(){
     this.quote=[
       new Quote(1,"A true friend is someone who is there for you when he’d rather be anywhere else.","Len wein",new Date(2019,5,14)), 
-      new Quote(2,"A grieving woman could sit alone on a jetty in the early morning. But not with a book in her hands.","Pia juul",new Date(2019,5,14)), 
-      new Quote(3,"A painting is worth a thousand confused art-gallery visitors.","Ljupka Cvetanova",new Date(2019,5,14)),      
+      // new Quote(2,"A grieving woman could sit alone on a jetty in the early morning. But not with a book in her hands.","Pia juul",new Date(2019,5,14)), 
+      // new Quote(3,"A painting is worth a thousand confused art-gallery visitors.","Ljupka Cvetanova",new Date(2019,5,14)),      
     ];
     
   } 
